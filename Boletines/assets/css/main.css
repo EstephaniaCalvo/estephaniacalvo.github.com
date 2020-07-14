@@ -1,0 +1,228 @@
+/* Cajas*/
+.container{
+    /* Centrar el elemento que va a contener*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Tamaño*/
+    height: 100vh;
+  
+    /* Aplicar degradado de fondo*/
+    background: #D82C32;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D82C32, #F65E63);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D82C32, #F65E63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
+  
+.content{
+    max-width: 960px;
+    width: 90%;
+    height: 80vh;
+    background-color: #FFFF;
+    padding:1em;
+    border-radius:10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    overflow-y: scroll;}
+
+/*Scroll Bar*/
+
+/* width */
+::-webkit-scrollbar { width: 0.3em;}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #27BDCD;
+    border-radius: 0.3em;
+    box-shadow:-0.05em 0.05em 0.3em 0.05em rgba(126, 124, 124, 0.719);
+}
+  
+/* Texto*/
+body{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: 300;}
+
+b { font-weight: bold;}
+.title{
+    text-transform: capitalize;
+    font-family: Oswald;
+    font-weight: 600;
+    font-size: 2.4em;}
+
+/* Íconos*/
+.fa-star, .fa-star-o, .fa-star-half-o {
+    color: #ffc400;
+    font-size: 0.90em;
+}
+
+/* Links*/
+a {
+    color:black;
+    text-decoration-line: underline;
+    text-decoration-color:#f65E63;
+    text-decoration: none;
+}
+
+/* Encabezado Canales*/
+.header-logo{
+    border-bottom-style: solid;
+    border-bottom-width: 0.3em;
+    border-bottom-color: #F65E63;
+}
+
+/* Logo del canal*/
+.channel-logo{
+    max-width: 100px;
+    width:4.5em;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top:1em;
+}
+
+/*Nombre y Redes*/
+.name-networks {
+    display: inline-block;
+    vertical-align: top;
+    padding:1em;
+}
+
+.name{
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 1.618em;
+    padding-bottom:0.3em;
+    margin:0;
+}
+
+.networks{ font-size:0.8em;}
+
+.networks a { padding-right:1em;}
+
+
+/* Detalle*/
+.details div {padding-top:1em; padding-left:1em}
+
+.category span{
+    display: inline-block; 
+    font-size:0.75em; 
+    padding:0.5em; 
+    border-style:solid; 
+    border-radius: 1em; 
+    border-color: #27BDCD}
+
+/* Tabla*/
+
+.table{
+    width:100%;
+    border-spacing: 0;
+}
+
+.table td, .table th{
+    text-align: left;
+    padding:1em;
+}
+
+.table th{
+    font-family: "Oswald", "Roboto", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+    font-size: 1.1em;
+    border-bottom-style: solid;
+    border-bottom-width: 0.18em;
+    border-bottom-color: #f65E63;
+}
+
+.table tr:nth-child(even){ background-color:#ffebe8;}
+
+.table td:nth-child(1){ font-weight: bold;}
+
+/*Video*/
+.embed-video{
+    
+}
+
+/*Execpciones para diseño responsivo*/
+
+/*Anchos inferiores a 600px*/
+@media (max-width: 630px){
+  
+    /*Formato cajas*/
+    .content{
+      width:80%;
+      font-size:14pt;
+      overflow-x: hidden;
+    }
+    
+    /*Formato título*/
+    .title{font-size:2em;}
+    .name{margin-bottom: 0.2em}
+    .networks{font-size: 0.7em;}
+    
+    /*Formato tabla*/
+      
+    th{display: none;} /*No mostrar los ecabezados*/
+    
+    .table td{display: block; padding:1ex; padding-left:4ex} /*La celda siguiente se apila*/
+
+    td:nth-of-type(1){
+        font-family: Oswald;
+        font-size: 1.5em;
+        padding-left:1ex;}
+    
+    /*Anchos ingeriores a 425*/
+    @media(max-width:425px){
+        .channel-logo{width: 25%; margin-bottom:0.5em}
+        .name-networks{width:55%; padding-top:10%}
+        .name{font-size: 130%;}
+        .networks{font-size: 60%}
+        .networks i{margin-bottom: 5%}
+    }
+}
+
+/*Anchos entre 600, 760 y 960*/
+@media (min-width: 630px){
+    body {font-size:12pt;}
+    .name-networks{width:80%;}
+    .name{padding-top:0.7em; padding-bottom:0;}
+    .networks{text-align: right; font-size: 0.7em;}
+    
+    /*Anchos superiores a 760px*/
+    @media (min-width: 760px) {body {font-size: 14pt;}}
+
+    /*Anchos superiores a 970px*/
+    @media (min-width: 970px){ body {font-size: 16pt;}}
+}
+
+/*Altos superiores a 550px*/
+@media (min-height: 550px){
+    .content{
+      min-height: 500px;
+      height:80%;
+    }
+  }
+
+/* .footer{
+    margin: 1%;
+    background-color: #AAC2C3;
+    height:3vh;
+} */
+
+/* Colores: 
+    Rose Madder: #D82C32
+    Sizzling Red: #F65E63
+    Baby Pink: #F5C3BC
+    Rosa Pálida: #ffebe8
+    Opal: #AAC2C3
+    Maximum Blue Green: 27BDCD
+    Rich Black FOGRA 39: 080708
+    Snow: F9F4F4
+*/
+
+/* Fuentes: 
+font-family: 'Oswald', sans-serif; (400, 600)
+font-family: 'Roboto', sans-serif; (300)
+*/
+
+/* Íconos:
+Estrellas:
+    Estrella llena: <i class="fa fa-star" aria-hidden="true"></i>
+    Estrella vacía: <i class="fa fa-star-o" aria-hidden="true"></i>
+    Estrealla a la mitad: <i class="fa fa-star-half-o" aria-hidden="true"></i>
+*/
